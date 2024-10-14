@@ -6,21 +6,22 @@ function Scoreboard() {
   const [wickets, setWickets] = useState(0);
   const [balls, setBalls] = useState(0); 
   const [showAlert, setShowAlert] = useState(false); 
+  
 
   const handleResetClick = () => {
-    setShowAlert(true); // Show the alert when the reset button is clicked
+    setShowAlert(true); 
   };
 
   const handleConfirmReset = () => {
-    // Logic to reset the scoreboard
     setRuns(0);
     setWickets(0);
     setBalls(0);
-    setShowAlert(false); // Hide the alert after confirmation
+    setShowAlert(false); 
+
   };
 
   const handleCancelReset = () => {
-    setShowAlert(false); // Hide the alert without resetting
+    setShowAlert(false);
   };
 
   const handleRun = (run) => {
@@ -49,12 +50,24 @@ function Scoreboard() {
 
 
   return (
-    <div className="scoreboard">
+    <div className="scoreboardCon">
+     <div className="scoreboard">
+     <div className="teamscont">
+            <div>
+              <label htmlFor="team1" className='teamLable'>Team 1'st :-</label>
+              <input type="text" className='teamInput' id='team1' placeholder='Enter Team Name'/>
+            </div>
+            <span className='teamLable teamLable2'>V/S</span>
+            <div>
+                <label htmlFor="team2" className='teamLable'>Team 2'nd :-</label>
+                <input type="text" className='teamInput' id='team2' placeholder='Enter Team Name'/>
+            </div>
+     </div>
       <h1>Cricket Scoreboard</h1>
       <div className="score">
         <p>Runs: {runs}</p>
         <p>Wickets: {wickets} / 10</p>
-        <p>Overs: {getOvers()}</p>
+        <p>Overs: {getOvers()}/20</p>
       </div>
 
       <div className="controls">
@@ -65,9 +78,8 @@ function Scoreboard() {
         <button onClick={() => handleRun(6)}>6 Runs</button>
         <button onClick={handleWicket} id='handleWicket'>Wicket</button>
         <div className="controls">
-      <button onClick={handleResetClick}>Reset</button>
-
-      {/* Custom Alert Box */}
+        <button className='saveButton applyPos1'>Save Record</button>
+      <button onClick={handleResetClick} className='resetButton applyPos2'>Reset</button>
       {showAlert && (
         <div className="alert-overlay">
           <div className="alert-box">
@@ -83,6 +95,9 @@ function Scoreboard() {
     </div>
       </div>
     </div>
+
+    </div>
+    
   );
 }
 

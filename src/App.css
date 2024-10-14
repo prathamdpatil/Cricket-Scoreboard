@@ -1,6 +1,19 @@
+.scoreboardCon{
+  display: flex;
+  justify-content: center;
+  height:50rem ;
+  width: 100%;
+  background-color: rgb(212, 241, 238);
+}
+
 .scoreboard {
   text-align: center;
   margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 950px;
+  height: 570px;
+  background-color: rgb(246, 232, 204);
 }
 
 .score {
@@ -10,7 +23,7 @@
 
 .controls button {
   margin: 10px;
-  padding: 10px 20px;
+  padding: 10px 20px; 
   font-size: 16px;
   cursor: pointer;
   background-color: #28a745;
@@ -25,3 +38,95 @@
 #handleWicket{
   background-color: red;
 }
+
+.resetButton{
+  background-color: crimson;
+}
+.applyPos1{
+  position: relative;
+  top: 120px;
+  right:290px;
+ 
+}
+.applyPos2{
+    position: relative;
+    top: 120px;
+    left:290px;
+}
+  
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 5; 
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.6; 
+}
+
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7); 
+  z-index: 10; 
+}
+
+.alert-box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.alert-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.alert-actions button {
+  padding: 8px 12px;
+  margin: 3px 10px;
+  cursor: pointer;
+}
+.teamInput{
+ padding: 8px ;
+ margin: 10px 0px 0px 15px;
+ border: 1px solid rgb(99, 80, 80);
+ border-radius: 5px;
+ width: 320px;
+ background-color: rgb(211, 227, 232);
+ font-size: 17px;
+ 
+ }
+ .teamInput:hover{
+  background-color: aliceblue;;
+ }
+ .teamscont{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 5px;
+ }
+
+ .teamLable{
+  font-size: 18px;
+  font-weight: 700;
+ }
+ .teamLable2{
+  position: relative;
+  top: 23px;
+  font-size: 25px;
+ }
